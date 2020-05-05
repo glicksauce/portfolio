@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap');
+
+*{
+    font-family: 'Baloo Tamma 2', cursive;
+}
+
+.spacer{
+    width: 100%;
+    height: 10px;
+    background: white;
+}
+
+body{
+    margin: 0;
+    background: white;
+}
+
+.topContainer{
+    width: 100%;
+}
+
+.leftBorder, .rightBorder{
+    float: left;
+    width: 15%;
+    height: 200px;
+    
+}
+
+.leftBorder{
+    background: -webkit-linear-gradient(left, white, rgba(255,255,255,.2));
+}
+
+.rightBorder{
+    background: -webkit-linear-gradient(left, rgba(255,255,255,.2), white);
+}
+.randomBoxesContainer{
+    float: left;
+    width: 70%;
+    height: 200px;
+    z-index: -101;
+}
+.randomBackgroundDiv{
+    border: 2px solid;
+    position: absolute;
+    overflow: hidden;
+    z-index: -1;
+}
+
+a {
+    font-style: unset;
+    color: unset;
+    text-decoration: unset;
+}
+h1 {
+    display: block;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    margin: 0 auto;
+    background: white;
+}
+
+h3 {
+    display: block;
+    width: 200px;
+    text-align: center;
+    margin: 0 auto;
+    height: 30px;
+    background: rgba(255,255,255,.2);
+
+}
+.menu{
+    margin: auto;
+    width: 100%;
+    height: 25px;
+    min-width: 200px;
+    background: rgb(199, 184, 184);
+    clear: both;
+}
+
+.item{
+    margin: 0 0 0 12% ;
+    float: left;
+    height: 100%;
+}
+
+.item:hover{
+    font-weight: bold;
+    background: rgb(112, 156, 156);
+}
+
+.folderMargin{
+    background:white;
+    width: 12%;
+    height: 450px;
+    float: left;
+}
+.folder{
+    background: white;
+    float: left;
+    margin: 0 auto;
+    width: 75%;
+    height: 100px;
+}
+
+.project{
+    width: 100%;
+    background: white;
+}
+
+
+.leftProject, .rightProject{
+    width: 49%;
+    min-width: 250px;
+    float: left;
+    display: none;
+    height: 450px;
+    overflow: hidden;
+}
+
+.leftProject{
+    border-top: 2px solid rgb(158, 135, 135);
+    border-bottom: 2px solid rgb(158, 135, 135);
+    border-left: 2px solid rgb(158, 135, 135);
+}
+
+.rightProject{
+    border-top: 2px solid rgb(158, 135, 135);
+    border-bottom: 2px solid rgb(158, 135, 135);
+    border-right: 2px solid rgb(158, 135, 135);
+}
+
+.skills{
+    height: 500px;
+    margin: 0 45%;
+    display: none;
+    background: white;
+}
+
+
+.skills li{
+    margin: 5px 0;
+    list-style-type: none;
+    display: list-item;
+    border: 1px solid gray;
+    width: 150px;
+    height: 30px;
+    
+}
