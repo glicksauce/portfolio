@@ -130,6 +130,22 @@ h3 {
     border-right: 2px solid rgb(158, 135, 135);
 }
 
+.about{
+    height: 500px;
+    margin: 0 35%;
+    display: none;
+    background: white;
+}
+
+.about p {
+    text-align: justify;
+}
+
+.about img{
+    width: 50%;
+    margin: 15px 25%;
+}
+
 .skills{
     height: 500px;
     margin: 0 45%;

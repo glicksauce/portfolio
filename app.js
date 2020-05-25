@@ -30,6 +30,11 @@ $(() => {
         $('.skills').toggle()
     }
 
+    const toggleAbout = () => {
+        $('.mainContent').toggle()
+        $('.about').toggle()
+    }
+
     const showProjectDivs = (divsIdArray) => {
         divsIdArray.forEach(iterator)
         function iterator(item,index){
@@ -48,6 +53,15 @@ $(() => {
         }
     }
 
+    $('#calendarJournal')
+        .mouseover(() =>{
+            showProjectDivs(["calendarJournal1","calendarJournal2"])
+            $('#calendarJournal').css("height","450px")
+        })
+        .mouseout(() =>{
+            hideProjectDivs(["calendarJournal1","calendarJournal2"])
+            $('#calendarJournal').css("height","unset")
+    })
 
     $('#bikeRace')
         .mouseover(() =>{
@@ -83,6 +97,11 @@ $(() => {
      $('#skillsId').click(() => {
          toggleSkills()
      })
+
+     $('#about').click(() => {
+         toggleAbout()
+     })
+
     //display background rectangles
     createBackground()
 
