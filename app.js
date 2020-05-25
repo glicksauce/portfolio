@@ -28,11 +28,21 @@ $(() => {
     const toggleSkills = () =>{
         $('.mainContent').toggle()
         $('.skills').toggle()
+        $('.about.').hide()
     }
 
     const toggleAbout = () => {
         $('.mainContent').toggle()
         $('.about').toggle()
+        $('.skills').hide()
+    }
+
+    const showElement = (element) => {
+        $('.mainContent').hide()
+        $('.skills').hide()
+        $('.about').hide()
+
+        $(element).show()
     }
 
     const showProjectDivs = (divsIdArray) => {
@@ -95,11 +105,11 @@ $(() => {
 
 
      $('#skillsId').click(() => {
-         toggleSkills()
+         showElement('.skills')
      })
 
      $('#about').click(() => {
-         toggleAbout()
+         showElement('.about')
      })
 
     //display background rectangles
