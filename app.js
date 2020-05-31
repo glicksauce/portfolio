@@ -2,8 +2,9 @@ $(() => {
     console.log("hi")
     $(".folder").animate({height:"600px"})
 
-
+    //first color
     const createBackground = () => {
+        //set random number of tiles (min 50)
         let tileCount = Math.floor(Math.random() * 100) + 50
         console.log(tileCount)
 
@@ -15,7 +16,6 @@ $(() => {
             $newBackgroundDiv = $('<div>')
                 .text(" ")
                 .addClass('randomBackgroundDiv')
-                .css("border-color", "orange")
                 .css("width", randomWidth + "px")
                 .css("left",randomLeftPos + "%")
                 .css("top", randomTopPos + "px")
@@ -23,6 +23,35 @@ $(() => {
             $('.randomBoxesContainer').prepend($newBackgroundDiv)
         }
 
+    }
+
+    //second color
+    const createBackgroundAltColor = () => {
+        //set random number of tiles (min 50)
+        let tileCount = Math.floor(Math.random() * 100) + 50
+        console.log(tileCount)
+
+        for (i=0;i<tileCount;i++){
+            let randomWidth = Math.floor(Math.random() * 200) + 1
+            let randomLeftPos = Math.floor(Math.random() * 90)
+            let randomTopPos = Math.floor(Math.random() * 200)
+            let randomHeight = Math.floor(Math.random() * 100) + 10
+            $newBackgroundDiv = $('<div>')
+                .text(" ")
+                .addClass('randomBackgroundDivAltColor')
+                .css("width", randomWidth + "px")
+                .css("left",randomLeftPos + "%")
+                .css("top", randomTopPos + "px")
+                .css("height", randomHeight)
+            $('.randomBoxesContainer').prepend($newBackgroundDiv)
+        }
+
+    }
+
+    const titleAnimation = () =>{
+        // $('#title').animate({height: '75px'}, "slow")
+        $('#title').animate({width: '250px'}, 500)
+       
     }
 
     const toggleSkills = () =>{
@@ -63,10 +92,20 @@ $(() => {
         }
     }
 
+    $('#indexr')
+    .mouseover(() =>{
+        showProjectDivs(["indexr1","indexr2"])
+        $('#indexr').css("height","375px")
+    })
+    .mouseout(() =>{
+        hideProjectDivs(["indexr1","indexr2"])
+        $('#indexr').css("height","unset")
+    })
+
     $('#calendarJournal')
         .mouseover(() =>{
             showProjectDivs(["calendarJournal1","calendarJournal2"])
-            $('#calendarJournal').css("height","450px")
+            $('#calendarJournal').css("height","400px")
         })
         .mouseout(() =>{
             hideProjectDivs(["calendarJournal1","calendarJournal2"])
@@ -114,7 +153,8 @@ $(() => {
 
     //display background rectangles
     createBackground()
-
+    createBackgroundAltColor()
+     titleAnimation()
 
     
 

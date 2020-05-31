@@ -39,11 +39,26 @@ body{
     height: 200px;
     z-index: -101;
 }
+
+#title{
+    background: rgba(255, 255, 255, 0.671);
+    border-radius: 25px;
+    width: 1px;
+}
 .randomBackgroundDiv{
     border: 2px solid;
     position: absolute;
     overflow: hidden;
     z-index: -1;
+    border-color: orange;
+}
+
+.randomBackgroundDivAltColor{
+    border: 2px dotted;
+    position: absolute;
+    overflow: hidden;
+    z-index: -1;
+    border-color: orange;
 }
 
 a {
@@ -74,7 +89,7 @@ h3 {
     width: 100%;
     height: 25px;
     min-width: 200px;
-    background: rgb(199, 184, 184);
+    background: -webkit-linear-gradient(left, rgb(104, 62, 129), white);
     clear: both;
 }
 
@@ -87,6 +102,7 @@ h3 {
 .item:hover{
     font-weight: bold;
     background: rgb(112, 156, 156);
+    cursor: pointer;
 }
 
 .folderMargin{
@@ -122,6 +138,13 @@ h3 {
     border-top: 2px solid rgb(158, 135, 135);
     border-bottom: 2px solid rgb(158, 135, 135);
     border-left: 2px solid rgb(158, 135, 135);
+}
+
+.leftProject p{
+    margin: 15px 25px;
+}
+.leftProject li{
+    margin: 0 50px;
 }
 
 .rightProject{
@@ -163,3 +186,17 @@ h3 {
     height: 30px;
     
 }
+
+@media only screen and (max-width: 578px) {
+    .menu {
+         height: 75px; 
+    }
+    .item {
+        height: 50%;
+    }
+    #resume{
+        text-align: center;
+        margin: 0 200px;
+    }
+  }
+  
